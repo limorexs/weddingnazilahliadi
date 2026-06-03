@@ -1,0 +1,1908 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta
+name="viewport"
+content="
+width=device-width,
+initial-scale=1,
+maximum-scale=1,
+"/>
+<title>Nazilah & Liadi Wedding</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+  /* TARUH DISINI */
+
+html,
+body{
+
+  overflow-x:hidden;
+
+  touch-action:pan-y;
+
+  -webkit-text-size-adjust:100%;
+
+  overscroll-behavior:smooth;
+}
+
+*{
+
+  touch-action:manipulation;
+}
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+:root{
+  --cream:#fd9f9f;
+  --soft-cream:#fffaf5;
+  --burgundy:#8e2942;
+  --gold:#d4b483;
+  --text:#4b3a33;
+  --white:#ffffff;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:var(--cream);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+
+/* LOADER */
+#loader{
+  position:fixed;
+  inset:0;
+  background:linear-gradient(135deg,#f6efe7,#fffaf5);
+  z-index:99999;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  transition:1s;
+}
+
+.loader-content{
+  text-align:center;
+}
+
+.loader-ring{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  border:3px solid rgba(142,41,66,.15);
+  border-top:3px solid var(--burgundy);
+  margin:auto auto 25px;
+  animation:spin 1.2s linear infinite;
+}
+
+.loader-text{
+  font-family:'Great Vibes',cursive;
+  font-size:3rem;
+  color:var(--burgundy);
+}
+
+@keyframes spin{
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+/* FLOWER BACKGROUND */
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background:url('flower.png') repeat;
+  background-size:320px;
+  opacity:.08;
+  z-index:-2;
+  animation:bgMove 30s linear infinite;
+}
+
+@keyframes bgMove{
+  from{background-position:0 0;}
+  to{background-position:0 1000px;}
+}
+
+/* GLITTER */
+.glitter{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:1;
+  background-image:radial-gradient(rgba(212,180,131,.4) 1px,transparent 1px);
+  background-size:80px 80px;
+  animation:glitterMove 12s linear infinite;
+}
+
+@keyframes glitterMove{
+  from{transform:translateY(0);}
+  to{transform:translateY(80px);}
+}
+
+/* PETALS */
+.petals{
+  position:fixed;
+  inset:0;
+  overflow:hidden;
+  pointer-events:none;
+  z-index:2;
+}
+
+.petal{
+  position:absolute;
+  top:-50px;
+  width:22px;
+  height:22px;
+  background:radial-gradient(circle at 30% 30%,#fff,#f4c6d7);
+  border-radius:50% 0 50% 0;
+  opacity:.7;
+  animation:falling linear forwards;
+}
+
+@keyframes falling{
+  to{
+    transform:translateY(110vh) rotate(360deg);
+    opacity:0;
+  }
+}
+
+/* PARTICLES */
+.particles{
+  position:fixed;
+  inset:0;
+  overflow:hidden;
+  pointer-events:none;
+  z-index:1;
+}
+
+.particles span{
+  position:absolute;
+  width:4px;
+  height:4px;
+  background:#d4b483;
+  border-radius:50%;
+  animation:particleFloat linear infinite;
+}
+
+@keyframes particleFloat{
+  from{transform:translateY(100vh);}
+  to{transform:translateY(-100vh);}
+}
+
+/* ANIMATION */
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes zoomSoft{
+  from{
+    opacity:0;
+    transform:scale(.92);
+  }
+  to{
+    opacity:1;
+    transform:scale(1);
+  }
+}
+
+@keyframes floating{
+  0%{transform:translateY(0px);}
+  50%{transform:translateY(-8px);}
+  100%{transform:translateY(0px);}
+}
+
+section{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  padding:40px 20px;
+  position:relative;
+  transition:1.2s cubic-bezier(.22,1,.36,1);
+}
+
+/* COVER */
+#cover{
+  background:
+  linear-gradient(rgba(110,31,50,.45),rgba(110,31,50,.45)),
+  url(ChatGPT\ Image\ 29\ Mei\ 2026\,\ 13.34.00.png) center/cover;
+  color:white;
+  text-align:center;
+}
+
+.cover-box{
+  animation:zoomSoft 1.5s ease;
+  background:rgba(255,255,255,.12);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.2);
+  padding:40px 30px;
+  border-radius:28px;
+  width:min(90%,420px);
+  box-shadow:0 10px 40px rgba(0,0,0,.2);
+}
+
+.subtitle{
+  letter-spacing:4px;
+  text-transform:uppercase;
+  font-size:.8rem;
+  margin-bottom:12px;
+}
+
+h1{
+  font-family:'Great Vibes',cursive;
+  font-size:4rem;
+  margin-bottom:15px;
+}
+
+.date{
+  margin-bottom:20px;
+}
+
+.countdown{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  margin:25px 0;
+  flex-wrap:wrap;
+}
+
+.time-box{
+  width:75px;
+  padding:14px 10px;
+  border-radius:18px;
+  background:rgba(255,255,255,.15);
+  backdrop-filter:blur(8px);
+}
+
+.btn{
+ border:none;
+  padding:14px 26px;
+  border-radius:14px;
+  background:var(--burgundy);
+  color:#ffffff;
+  cursor:pointer;
+  font-weight:600;
+  transition:.3s;
+  transform-origin:center;
+} 
+
+.envelope-btn{
+  animation:pulseGlow 2.5s infinite;
+}
+
+@keyframes pulseGlow{
+  0%{box-shadow:0 0 0 rgba(212,180,131,0);}
+  50%{box-shadow:0 0 30px rgba(212,180,131,.55);}
+  100%{box-shadow:0 0 0 rgba(212,180,131,0);}
+}
+
+#main{
+  display:none;
+  animation:fadeMain 1.2s ease;
+}
+@keyframes fadeMain{
+
+  from{
+    opacity:0;
+    transform:translateY(15px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+.section-title{
+  font-family:'Great Vibes',cursive;
+  color:var(--burgundy);
+  font-size:3rem;
+  margin-bottom:10px;
+  animation:cinematicText 1.8s ease;
+}
+
+@keyframes cinematicText{
+  from{
+    opacity:0;
+    letter-spacing:10px;
+    transform:translateY(50px);
+  }
+  to{
+    opacity:1;
+    letter-spacing:0;
+    transform:translateY(0);
+  }
+}
+
+.section-sub{
+  max-width:700px;
+  text-align:center;
+  line-height:1.8;
+}
+
+.couple-wrap{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
+  width:min(100%,900px);
+  margin-top:40px;
+}
+
+.couple-card{
+  background:var(--soft-cream);
+  border-radius:24px;
+  padding:24px;
+  text-align:center;
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.couple-card img{
+  animation:floating 4s ease-in-out infinite;
+  width:160px;
+  height:160px;
+  object-fit:cover;
+  border-radius:50%;
+  border:6px solid var(--gold);
+  margin-bottom:16px;
+}
+
+.event-box{
+  width:min(100%,700px);
+  background:linear-gradient(135deg,#8e2942,#b03c5c,#7a1f36);
+  color:white;
+  padding:35px;
+  border-radius:28px;
+  text-align:center;
+  margin-top:30px;
+  box-shadow:0 15px 40px rgba(110,31,50,.2);
+}
+
+iframe{
+  width:100%;
+  height:260px;
+  border:none;
+  border-radius:18px;
+  margin-top:20px;
+}
+
+.gallery{
+  overflow:hidden;
+  width:100%;
+  margin-top:35px;
+}
+
+.gallery-track{
+  display:flex;
+  gap:16px;
+  width:max-content;
+  animation:autoSlide 28s linear infinite;
+}
+
+.gallery img{
+  width:280px;
+  height:360px;
+  object-fit:cover;
+  border-radius:20px;
+  box-shadow:0 8px 25px rgba(0,0,0,.1);
+}
+
+@keyframes autoSlide{
+  from{transform:translateX(0);}
+  to{transform:translateX(-50%);}
+}
+
+/* =========================
+   WEDDING GIFT RESPONSIVE
+========================= */
+
+.gift-wrapper{
+
+  width:min(100%,1000px);
+
+  margin-top:40px;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:14px;
+
+  align-items:center;
+}
+
+/* MODE WEB */
+.gift-card{
+
+  width:100%;
+  max-width:750px;
+
+  position:relative;
+  overflow:hidden;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+
+  padding:34px;
+
+  border-radius:30px;
+
+  background:
+  linear-gradient(
+    145deg,
+    rgba(255,255,255,.96),
+    rgba(255,250,245,.92)
+  );
+
+  border:
+  1px solid rgba(110,31,50,.08);
+
+  box-shadow:
+  0 15px 35px rgba(0,0,0,.08);
+
+  transition:.5s;
+}
+
+/* HOVER */
+.gift-card:hover{
+
+  transform:
+  translateY(-8px);
+
+  box-shadow:
+  0 20px 45px rgba(110,31,50,.15);
+}
+
+/* GOLD LIGHT */
+.gift-card::before{
+
+  content:'';
+
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+    135deg,
+    rgba(212,180,131,.12),
+    transparent 40%
+  );
+
+  pointer-events:none;
+}
+
+/* TOP */
+.bank-top{
+
+  display:flex;
+  align-items:center;
+
+  gap:18px;
+
+  margin-bottom:22px;
+}
+
+/* LOGO */
+.bank-logo{
+
+  width:78px;
+
+  object-fit:contain;
+}
+
+/* BANK */
+.bank-name{
+
+  font-size:1rem;
+  font-weight:600;
+  letter-spacing:2px;
+
+  color:#d4b483;
+}
+
+/* NUMBER */
+.rekening{
+
+  font-size:1.7rem;
+  font-weight:700;
+
+  letter-spacing:2px;
+
+  color:#d4b483;
+
+  margin-bottom:12px;
+}
+
+/* OWNER */
+.rekening-name{
+
+  opacity:.8;
+
+  margin-bottom:24px;
+}
+
+/* BUTTON */
+.gift-card .btn{
+
+  width:220px;
+}
+
+/* =========================
+   MOBILE MODE
+========================= */
+
+@media(max-width:768px){
+
+  .gift-wrapper{
+
+    align-items:center;
+  }
+
+  .gift-card{
+
+    width:100%;
+    max-width:380px;
+
+    text-align:center;
+
+    padding:28px 22px;
+  }
+
+  .bank-top{
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    gap:12px;
+  }
+
+  .bank-logo{
+
+    width:68px;
+  }
+
+  .rekening{
+
+    font-size:1.25rem;
+
+    letter-spacing:1px;
+  }
+
+  .gift-card .btn{
+
+    width:100%;
+  }
+
+}
+
+.rsvp-box{
+  width:min(100%,550px);
+  background:white;
+  padding:30px;
+  border-radius:24px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  margin-top:30px;
+}
+
+input,textarea,select{
+  width:100%;
+  padding:14px;
+  margin-bottom:14px;
+  border-radius:12px;
+  border:1px solid rgba(110,31,50,.15);
+  font-family:Poppins;
+}
+
+.wish-item{
+  background:var(--soft-cream);
+  border-left:5px solid var(--burgundy);
+  padding:18px;
+  border-radius:16px;
+  margin-top:15px;
+}
+
+.music-btn,.theme-btn{
+  position:fixed;
+  width:55px;
+  height:55px;
+  border:none;
+  border-radius:50%;
+  color:white;
+  background:var(--burgundy);
+  z-index:999;
+}
+
+.music-btn{
+  bottom:90px;
+  right:20px;
+}
+
+.theme-btn{
+  top:20px;
+  right:20px;
+}
+
+/* =========================
+   PREMIUM NAVBAR FIX
+========================= */
+
+.nav{
+
+  position:fixed;
+
+  bottom:18px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  width:auto;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  gap:14px;
+
+  padding:
+  14px 26px;
+
+  border-radius:999px;
+
+  background:
+  rgba(90,24,40,.72);
+
+  backdrop-filter:blur(18px);
+
+  border:
+  1px solid rgba(255,255,255,.12);
+
+  box-shadow:
+  0 10px 35px rgba(0,0,0,.18);
+
+  z-index:99999;
+
+  pointer-events:auto;
+}
+
+/* LINK */
+.nav a{
+
+  position:relative;
+
+  color:white;
+
+  text-decoration:none;
+
+  font-size:.82rem;
+  font-weight:500;
+
+  letter-spacing:.5px;
+
+  transition:.35s ease;
+
+  pointer-events:auto;
+}
+
+/* HOVER */
+.nav a:hover{
+
+  color:#f8dfb6;
+
+  transform:translateY(-2px);
+}
+
+/* GARIS BAWAH */
+.nav a::after{
+
+  content:'';
+
+  position:absolute;
+
+  left:0;
+  bottom:-6px;
+
+  width:0%;
+  height:2px;
+
+  background:#f8dfb6;
+
+  border-radius:999px;
+
+  transition:.4s;
+}
+
+.nav a:hover::after{
+
+  width:100%;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .nav{
+
+    gap:14px;
+
+    padding:
+    12px 20px;
+
+    bottom:12px;
+  }
+
+  .nav a{
+
+    font-size:.72rem;
+  }
+
+}
+
+.footer{
+  background:linear-gradient(180deg,#5a1828,#3f101c);
+  color:white;
+  text-align:center;
+  padding:70px 20px 110px;
+}
+
+.footer h3{
+  font-family:'Great Vibes',cursive;
+  font-size:3rem;
+  color:#f8dfb6;
+}
+
+.socials{
+  display:flex;
+  justify-content:center;
+  gap:42px;
+  margin:45px 0 30px;
+}
+
+.social-item{
+  width:62px;
+  height:62px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:50%;
+  text-decoration:none;
+  color:white;
+  font-size:1.35rem;
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(16px);
+  transition:.5s;
+}
+
+.social-item:hover{
+  transform:translateY(-10px) scale(1.12);
+  background:linear-gradient(135deg,#f5deb3,#d4b483);
+  color:#5a1828;
+}
+
+.dark-mode{
+  background:#1c1414;
+  color:#f5e8df;
+}
+
+@media(max-width:768px){
+  h1{
+    font-size:3rem;
+  }
+
+  .section-title{
+    font-size:2.4rem;
+  }
+
+  .socials{
+    gap:14px;
+  }
+}
+/* SIMPLE SCROLL ANIMATION */
+
+.scroll-show{
+
+  opacity:0;
+
+  transform:
+  translateY(40px);
+
+  transition:
+  all 1s ease;
+
+}
+
+.scroll-show.active{
+
+  opacity:1;
+
+  transform:
+  translateY(0);
+
+}
+/* SIMPLE TEXT SCROLL */
+
+.text-scroll{
+
+  opacity:0;
+
+  transform:
+  translateY(25px);
+
+  transition:
+  opacity 1s ease,
+  transform 1s ease;
+
+}
+
+.text-scroll.show{
+
+  opacity:1;
+
+  transform:
+  translateY(0);
+
+}
+/* GOLD TEXT */
+
+.gold-text{
+
+  color:#d4b483;
+
+  text-shadow:
+  0 0 10px rgba(212,180,131,.25);
+
+}
+
+
+</style>
+</head>
+<body>
+  <!-- =========================
+ANIMASI SAAT BUKA UNDANGAN
+(PRELOADER / CINEMATIC)
+Taruh sebelum </body>
+========================= -->
+
+<div class="open-effect" id="openEffect">
+  <div class="effect-glow"></div>
+  <div class="effect-text">
+    Welcome To Our Wedding
+  </div>
+</div>
+
+<style>
+
+.open-effect{
+  position:fixed;
+  inset:0;
+  background:
+  radial-gradient(
+    circle at center,
+    rgba(255,240,220,.15),
+    rgba(40,10,20,.96)
+  );
+
+  backdrop-filter:blur(8px);
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+
+  z-index:99999;
+
+  opacity:0;
+  visibility:hidden;
+
+  transition:1s ease;
+}
+
+.open-effect.active{
+  opacity:1;
+  visibility:visible;
+}
+
+.effect-glow{
+  width:220px;
+  height:220px;
+  border-radius:50%;
+
+  position:absolute;
+
+  background:
+  radial-gradient(
+    circle,
+    rgba(212,180,131,.55),
+    transparent 70%
+  );
+
+  animation:pulseGlow 2s ease infinite;
+
+  filter:blur(10px);
+}
+
+.effect-text{
+  position:relative;
+  z-index:2;
+
+  font-family:'Great Vibes',cursive;
+  font-size:4rem;
+
+  color:#f5deb3;
+
+  text-align:center;
+
+  text-shadow:
+  0 5px 20px rgba(0,0,0,.35);
+
+  animation:fadeZoom 1.8s ease;
+}
+
+@keyframes pulseGlow{
+
+  0%{
+    transform:scale(.8);
+    opacity:.6;
+  }
+
+  50%{
+    transform:scale(1.2);
+    opacity:1;
+  }
+
+  100%{
+    transform:scale(.8);
+    opacity:.6;
+  }
+
+}
+
+@keyframes fadeZoom{
+
+  0%{
+    opacity:0;
+    transform:
+    scale(.7)
+    translateY(20px);
+  }
+
+  100%{
+    opacity:1;
+    transform:
+    scale(1)
+    translateY(0);
+  }
+
+}
+
+</style>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-content">
+    <div class="loader-ring"></div>
+    <h2 class="loader-text">Nazilah & Liadi</h2>
+    <p>Mempersiapkan Undangan...</p>
+  </div>
+</div>
+
+<div class="glitter"></div>
+<div class="petals"></div>
+
+<div class="particles">
+  <span style="left:10%;animation-duration:12s"></span>
+  <span style="left:30%;animation-duration:18s"></span>
+  <span style="left:50%;animation-duration:15s"></span>
+  <span style="left:70%;animation-duration:20s"></span>
+  <span style="left:90%;animation-duration:16s"></span>
+</div>
+
+<button class="theme-btn" onclick="toggleTheme()">
+<i class="fa-solid fa-moon"></i>
+</button>
+
+<section id="cover">
+  <div class="cover-box">
+
+    <p class="subtitle">The Wedding Of</p>
+    <h1>Nazilah & Liadi</h1>
+
+    <p class="date">Sabtu, 28 Agustus 2028</p>
+
+    <div class="countdown">
+      <div class="time-box"><h2 id="days">00</h2><span>Hari</span></div>
+      <div class="time-box"><h2 id="hours">00</h2><span>Jam</span></div>
+      <div class="time-box"><h2 id="minutes">00</h2><span>Menit</span></div>
+      <div class="time-box"><h2 id="seconds">00</h2><span>Detik</span></div>
+    </div>
+
+    <div class="guest">
+      <small>Kepada Yth.</small>
+      <h3 id="guestName">Tamu Undangan</h3>
+    </div>
+
+    <button class="btn envelope-btn" onclick="openInvitation()">
+      <i class="fa-solid fa-envelope-open"></i>
+      Buka Undangan
+    </button>
+
+    
+
+  </div>
+</section>
+
+<main id="main">
+
+<section>
+  <section id="couple" class="scroll-show">
+  <h2 class="section-title">Bride & Groom</h2>
+
+  <p class="section-title text-scroll" font size>
+وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً
+</p>
+
+  <p class="section-sub text-scroll">
+“Dan di antara tanda-tanda kekuasaan-Nya, Dia menciptakan untukmu pasangan dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang.”(QS. Ar-Rum:21)</p>
+
+  <div class="couple-wrap">
+
+    <div class="couple-card">
+      <img src="Adat.jpg">
+      <h3 class="section-title text-scroll gold-text">Zainun Nazilah</h3>
+      <p class="section-sub text-scroll gold-text">Putri dari Bapak Muhammad Andik & Ibu Safitriana</p>
+    </div>
+
+    <div class="couple-card">
+      <img src="Adat.jpg">
+      <h3 class="section-title text-scroll gold-text">Liadi Taqwa</h3>
+      <p class="section-sub text-scroll gold-text">Putra dari Bapak Sutamin & Ibu Solikhati</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="event" class="scroll-show">
+
+  <h2 class="section-title">
+    Wedding Event
+  </h2>
+
+  <div class="event-box">
+
+    <h3>Akad & Resepsi</h3>
+
+    <p>Sabtu, 28 Agustus 2028</p>
+
+    <p>Pukul 09.00 WIB</p>
+
+    <p style="margin-top:10px">
+      Jl. Gatot Subroto No.77, Krajan II, Jombang, Kec. Jombang, Kabupaten Jember, Jawa Timur 68168
+    </p>
+
+    <!-- GOOGLE MAPS -->
+<iframe
+  src="https://maps.google.com/maps?q=-8.2555438,113.3433884&z=18&output=embed"
+  width="100%"
+  height="300"
+  style="
+    border:0;
+    border-radius:20px;
+    margin-top:20px;
+  "
+  allowfullscreen=""
+  loading="lazy">
+</iframe>
+
+<!-- BUTTON MAPS -->
+<a
+  href="https://www.google.com/maps/search/?api=1&query=-8.2555438,113.3433884"
+  target="_blank"
+  style="text-decoration:none;"
+>
+  <button class="btn" style="margin-top:20px;">
+    📍 Buka Google Maps
+  </button>
+</a>
+
+</section>
+
+<section id="gallery" class="scroll-show">
+  <h2 class="section-title">Gallery</h2>
+
+  <div class="gallery">
+
+    <div class="gallery-track">
+      <img src="Adat.jpg">
+      <img src="Adat.jpg">
+      <img src="Adat.jpg">
+      <img src="Adat.jpg">
+      <img src="Adat.jpg">
+      <img src="Adat.jpg">
+      <img src="Adat.jpg">
+      <img src="Adat.jpg">
+    </div>
+
+  </div>
+</section>
+
+<section id="gift" class="scroll-show">
+  <h2 class="section-title">Wedding Gift</h2>
+
+  <div class="gift-wrapper">
+
+    <div class="gift-card">
+      <div class="bank-top">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Bank_Central_Asia.svg" class="bank-logo">
+        <span></span>
+      </div>
+
+      <div class="rekening" id="rekeningBca">
+        4890286211
+      </div>
+      <p>a.n Liadi Taqwa</p>
+
+      <button class="btn" onclick="copyRekening('rekeningBca')">
+        Salin Rekening
+      </button>
+    </div>
+
+    <div class="gift-card">
+      <div class="bank-top">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/BRI_2020.svg" class="bank-logo">
+        <span></span>
+      </div>
+
+      <div class="rekening" id="rekeningBri">
+        623201017264531
+      </div>
+      <p>a.n Zainun Nazilah</p>
+
+      <button class="btn" onclick="copyRekening('rekeningBri')">
+        Salin Rekening
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<section id="rsvp" class="scroll-show">
+  <h2 class="section-title">RSVP & Wishes</h2>
+
+  <div class="rsvp-box">
+
+    <input type="text" id="nama" placeholder="Nama Anda">
+
+    <select id="status">
+      <option>Hadir</option>
+      <option>Tidak Hadir</option>
+    </select>
+
+    <textarea id="ucapan" placeholder="Tulis ucapan..."></textarea>
+
+    <button class="btn" onclick="sendWish()">
+      Kirim Ucapan
+    </button>
+
+</section>
+
+</main>
+
+<button class="music-btn" onclick="toggleMusic()">♫</button>
+
+<audio id="music" loop>
+  <source src="Tiara Andini, Arsy Widianto - Lagu Pernikahan Kita.mp3" type="audio/mpeg">
+</audio>
+
+
+<div class="nav">
+
+  <a href="#couple">couple</a>
+  <a href="#event">Event</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#gift">Gift</a>
+  <a href="#rsvp">RSVP</a> 
+
+</div>
+
+<footer class="footer">
+
+  <h3>Nazilah & Liadi</h3>
+
+  <p>Terima kasih atas doa dan restu yang diberikan.</p>
+
+  <small>
+    © 2026 Wedding Invitation. All Rights Reserved
+  </small>
+
+  <div class="socials">
+
+    <a href="https://www.instagram.com/liadi_taqwa/" target="_blank" class="social-item">
+      <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://wa.me/6281215927958" target="_blank" class="social-item">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+  </div>
+
+  <div>
+    Created with ❤️ by Nazilah & Liadi
+  </div>
+
+</footer>
+
+<script>
+
+/* LOADER */
+window.addEventListener('load',()=>{
+
+  setTimeout(()=>{
+
+    document.getElementById('loader').style.opacity='0';
+
+    setTimeout(()=>{
+      document.getElementById('loader').style.display='none';
+    },1000);
+
+  },2200);
+
+});
+
+/* PETAL */
+function createPetal(){
+
+  const petal=document.createElement('div');
+
+  petal.classList.add('petal');
+
+  petal.style.left=Math.random()*100+'vw';
+
+  petal.style.animationDuration=6+Math.random()*6+'s';
+
+  document.querySelector('.petals').appendChild(petal);
+
+  setTimeout(()=>{
+    petal.remove();
+  },12000);
+
+}
+
+setInterval(createPetal,400);
+
+/* =========================================
+   PREMIUM AUTO GUEST SYSTEM
+   FIX BUG + AUTO LINK INVITATION
+========================================= */
+
+/* AMBIL PARAMETER URL */
+const urlParams =
+new URLSearchParams(window.location.search);
+
+/* SUPPORT BANYAK PARAMETER */
+let guestName =
+urlParams.get('kpd') ||
+urlParams.get('to') ||
+urlParams.get('guest') ||
+urlParams.get('nama') ||
+'Tamu Undangan';
+
+/* DECODE URL */
+guestName =
+decodeURIComponent(guestName);
+
+/* HAPUS KARAKTER ANEH */
+guestName = guestName
+.replace(/[<>]/g,'')
+.replace(/\+/g,' ')
+.trim();
+
+/* AUTO CAPITAL */
+function capitalizeWords(text){
+
+  return text
+  .toLowerCase()
+  .replace(/\b\w/g,
+  function(char){
+    return char.toUpperCase();
+  });
+
+}
+
+/* HASIL FINAL */
+guestName =
+capitalizeWords(guestName);
+
+/* TAMPILKAN NAMA */
+const guestElement =
+document.getElementById('guestName');
+
+if(guestElement){
+
+  guestElement.innerHTML =
+  guestName;
+
+}
+
+/* GANTI TITLE WEBSITE */
+document.title =
+`Undangan ${guestName} | Nazilah & Liadi`;
+
+/* AUTO META DESCRIPTION */
+const metaDescription =
+document.querySelector(
+'meta[name="description"]'
+);
+
+if(metaDescription){
+
+  metaDescription.setAttribute(
+    'content',
+    `Undangan pernikahan digital untuk ${guestName}`
+  );
+
+}
+
+/* =========================================
+   AUTO SHARE LINK
+========================================= */
+
+function getInvitationLink(name){
+
+  const baseUrl =
+  window.location.origin +
+  window.location.pathname;
+
+  return `${baseUrl}?kpd=${encodeURIComponent(name)}`;
+
+}
+
+/* =========================================
+   PREMIUM SHARE
+========================================= */
+
+function shareInvitation(){
+
+  const invitationLink =
+  getInvitationLink(guestName);
+
+  const shareMessage =
+`✨ UNDANGAN PERNIKAHAN ✨
+
+Kepada Yth.
+${guestName}
+
+Dengan penuh kebahagiaan kami mengundang Anda untuk hadir di hari pernikahan kami.
+
+💍 Nazilah & Liadi
+
+🔗 ${invitationLink}`;
+
+  /* SHARE API */
+  if(navigator.share){
+
+    navigator.share({
+
+      title:
+      'Wedding Invitation',
+
+      text:
+      shareMessage,
+
+      url:
+      invitationLink
+
+    });
+
+  }else{
+
+    navigator.clipboard.writeText(
+      invitationLink
+    );
+
+    showToast(
+      'Link undangan berhasil disalin'
+    );
+
+  }
+
+}
+
+/* =========================================
+   COPY LINK OTOMATIS
+========================================= */
+
+function copyInvitationLink(){
+
+  const invitationLink =
+  getInvitationLink(guestName);
+
+  navigator.clipboard.writeText(
+    invitationLink
+  );
+
+  showToast(
+    'Link berhasil disalin'
+  );
+
+}
+
+/* =========================================
+   PREMIUM TOAST
+========================================= */
+
+function showToast(message){
+
+  const toast =
+  document.createElement('div');
+
+  toast.className =
+  'premium-toast';
+
+  toast.innerHTML =
+  message;
+
+  document.body.appendChild(toast);
+
+  setTimeout(()=>{
+
+    toast.classList.add('show');
+
+  },100);
+
+  setTimeout(()=>{
+
+    toast.classList.remove('show');
+
+    setTimeout(()=>{
+
+      toast.remove();
+
+    },500);
+
+  },2500);
+
+}
+
+/* OPEN INVITATION */
+const music=document.getElementById('music');
+
+function openInvitation(){
+
+  const cover =
+  document.getElementById('cover');
+
+  const main =
+  document.getElementById('main');
+
+  const music =
+  document.getElementById('music');
+
+  /* EFEK SAAT TOMBOL DIKLIK */
+  const btn =
+  document.querySelector('.btn');
+
+  btn.style.transform = 'scale(.95)';
+  btn.style.transition = '.25s ease';
+
+  /* COVER FADE SIMPLE */
+  cover.style.transition =
+  'opacity 1.2s ease';
+
+  cover.style.opacity = '0';
+
+  /* TAMPILKAN HALAMAN */
+  setTimeout(()=>{
+
+    cover.style.display='none';
+
+    main.style.display='block';
+
+    window.scrollTo(0,0);
+
+    /* MUSIC */
+    if(music){
+
+      music.volume = 0;
+
+      const playPromise =
+      music.play();
+
+      if(playPromise !== undefined){
+
+        playPromise.then(()=>{
+
+          let volume = 0;
+
+          const fade =
+          setInterval(()=>{
+
+            if(volume < 1){
+
+              volume += 0.05;
+
+              music.volume =
+              Math.min(volume,1);
+
+            }else{
+
+              clearInterval(fade);
+
+            }
+
+          },180);
+
+        });
+
+      }
+
+    }
+
+  },1100);
+
+}
+
+/* COUNTDOWN */
+const targetDate = new Date('2028-08-28T09:00:00').getTime();
+
+setInterval(()=>{
+
+  const now = new Date().getTime();
+  const distance = targetDate - now;
+
+  document.getElementById('days').innerText = Math.floor(distance / (1000*60*60*24));
+  document.getElementById('hours').innerText = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+  document.getElementById('minutes').innerText = Math.floor((distance % (1000*60*60)) / (1000*60));
+  document.getElementById('seconds').innerText = Math.floor((distance % (1000*60)) / 1000);
+
+},1000);
+
+/* COPY */
+function copyRekening(id){
+
+  const rek=document.getElementById(id).innerText;
+
+  navigator.clipboard.writeText(rek);
+
+  alert('Nomor rekening berhasil disalin');
+
+}
+
+/* RSVP */
+async function sendWish(){
+
+  const nama =
+  document.getElementById('nama').value.trim();
+
+  const status =
+  document.getElementById('status').value;
+
+  const ucapan =
+  document.getElementById('ucapan').value.trim();
+
+  if(!nama){
+
+    alert('Nama wajib diisi');
+    return;
+
+  }
+
+   const data =
+  JSON.parse(
+    localStorage.getItem('wishes')
+  ) || [];
+
+  data.unshift({
+    nama,
+    status,
+    ucapan
+  });
+
+  localStorage.setItem(
+    'wishes',
+    JSON.stringify(data)
+  );
+
+  renderWishes();
+
+  document.getElementById('ucapan').value='';
+
+    alert('Ucapan berhasil dikirim ❤️');
+
+  }
+
+ function renderWishes(){
+
+  const wishList =
+  document.getElementById('wishList');
+
+  const data =
+  JSON.parse(
+    localStorage.getItem('wishes')
+  ) || [];
+
+  wishList.innerHTML='';
+
+  data.forEach(item=>{
+
+    wishList.innerHTML += `
+      <div class="wish-item">
+        <h4>${item.nama} (${item.status})</h4>
+        <p>${item.ucapan}</p>
+      </div>
+    `;
+
+  });
+
+}
+
+window.addEventListener(
+  'load',
+  ()=>{
+
+    localStorage.removeItem(
+      'wishes'
+    );
+
+    renderWishes();
+
+  }
+);
+
+
+function resetRSVP(){
+
+  if(
+    confirm(
+      'Yakin ingin menghapus semua ucapan RSVP?'
+    )
+  ){
+
+    localStorage.removeItem(
+      'wishes'
+    );
+
+    document.getElementById(
+      'wishList'
+    ).innerHTML='';
+
+    alert(
+      'Semua RSVP berhasil dihapus'
+    );
+
+  }
+
+}
+
+/* MUSIC */
+function toggleMusic(){
+
+  if(music.paused){
+    music.play();
+  }else{
+    music.pause();
+  }
+
+}
+
+/* THEME */
+function toggleTheme(){
+
+  document.body.classList.toggle('dark-mode');
+
+}
+// SIMPLE SCROLL EFFECT
+
+const scrollElements =
+document.querySelectorAll('.scroll-show');
+
+function showScroll(){
+
+  scrollElements.forEach(el=>{
+
+    const windowHeight =
+    window.innerHeight;
+
+    const elementTop =
+    el.getBoundingClientRect().top;
+
+    const showPoint = 100;
+
+    if(elementTop < windowHeight - showPoint){
+
+      el.classList.add('active');
+
+    }else{
+
+      el.classList.remove('active');
+
+    }
+
+  });
+
+}
+
+window.addEventListener(
+'scroll',
+showScroll
+);
+
+showScroll();
+
+// TEXT ANIMATION SCROLL
+
+const texts =
+document.querySelectorAll('.text-scroll');
+
+function animateText(){
+
+  texts.forEach(text=>{
+
+    const trigger =
+    window.innerHeight - 80;
+
+    const top =
+    text.getBoundingClientRect().top;
+
+    if(top < trigger){
+
+      text.classList.add('show');
+
+    }else{
+
+      text.classList.remove('show');
+
+    }
+
+  });
+
+}
+
+window.addEventListener(
+'scroll',
+animateText
+);
+
+animateText();
+
+
+
+function openInvitation(){
+
+  const effect =
+  document.getElementById('openEffect');
+
+  const cover =
+  document.getElementById('cover');
+
+  const main =
+  document.getElementById('main');
+
+  const music =
+  document.getElementById('music');
+
+  /* TAMPILKAN EFEK */
+  effect.classList.add('active');
+
+  /* COVER FADE */
+  setTimeout(()=>{
+
+    cover.style.opacity='0';
+    cover.style.transition='1s ease';
+
+  },700);
+
+  /* MASUK KE WEBSITE */
+  setTimeout(()=>{
+
+    cover.style.display='none';
+
+    main.style.display='block';
+
+    /* MUSIC AUTO PLAY */
+    if(music){
+
+      music.volume=0;
+
+      music.play();
+
+      let volume=0;
+
+      const fadeAudio =
+      setInterval(()=>{
+
+        if(volume < 1){
+
+          volume += 0.05;
+
+          music.volume =
+          Math.min(volume,1);
+
+        }else{
+
+          clearInterval(fadeAudio);
+
+        }
+
+      },180);
+
+    }
+
+  },1500);
+
+  /* HILANGKAN EFEK */
+  setTimeout(()=>{
+
+    effect.style.opacity='0';
+
+  },2600);
+
+  setTimeout(()=>{
+
+    effect.remove();
+
+  },3500);
+
+}
+const list =
+document.getElementById('wishList');
+
+const q =
+query(
+  collection(db,'rsvp')
+);
+
+onSnapshot(q,(snapshot)=>{
+
+  list.innerHTML='';
+
+  snapshot.forEach((doc)=>{
+
+    const data = doc.data();
+
+    list.innerHTML += `
+      <div class="wish-item">
+        <h4>
+          ${data.nama}
+          (${data.status})
+        </h4>
+
+        <p>
+          ${data.ucapan}
+        </p>
+      </div>
+    `;
+
+  });
+
+});
+
+
+</script>
+
+
+
+</script>
+
+</body>
+</html>
